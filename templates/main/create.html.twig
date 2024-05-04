@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+   <div class= "row">
+    <center><h1 class="mt-5 md-5">Why Not Book Now!!</h1></center>
+
+    {# Display the message #}
+   
+        <div class="col-md-6 offset-md-3">
+        {{ form_start(form) }}
+            <div class="form-group">
+            {{ form_label(form.names) }}
+            {{ form_widget(form.names,{'attr': {'class': 'form-control'}} ) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.contactNumber) }}
+            {{ form_widget(form.contactNumber,{'attr': {'class': 'form-control'}} ) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.eMail) }}
+            {{ form_widget(form.eMail,{'attr': {'class': 'form-control'}} ) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.nationality) }}
+            {{ form_widget(form.nationality,{'attr': {'class': 'form-control'}} ) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.destination) }}
+            {{ form_widget(form.destination,{'attr': {'class': 'form-control'}} ) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.travelDay) }}
+            {{ form_widget(form.travelDay,{'attr': {'class': 'form-control'}} ) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.totalDays) }}
+            {{ form_widget(form.totalDays,{'attr': {'class': 'form-control'}} ) }}
+        </div>
+
+        <div class="form-group">
+        <button class="btn btn-info mt-2 text-white">Submit</button>
+        </div>
+        {{ form_end(form) }}
+        </div>
+    </div>
+</div>
+{% endblock %}
